@@ -22,7 +22,6 @@ namespace SMS.Model
 
         public virtual Subject Subject { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Exam_Result> Exam_Result { get; set; }
     }
 }
