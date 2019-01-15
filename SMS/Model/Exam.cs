@@ -9,7 +9,6 @@ namespace SMS.Model
     [Table("Exam")]
     public partial class Exam
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Exam()
         {
             Exam_Result = new HashSet<Exam_Result>();
