@@ -1,0 +1,29 @@
+﻿<Window x:Class="SMS.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SMS.Windows"
+        mc:Ignorable="d"
+         Height="250" Width="400"  Title="Tətbiqə giriş" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/Images/Login_bg.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <DockPanel LastChildFill="True" >
+            <StackPanel Width="150" DockPanel.Dock="Left" VerticalAlignment="Center">
+                <Image Height="200" Width="150" Source="pack://application:,,,/Images/Login.png" />
+            </StackPanel>
+            <StackPanel Width="220" DockPanel.Dock="Right"  Margin="0,0,20,0"  VerticalAlignment="Center">
+                <Label Name="lblUserNameValidation"  Foreground="Red"/>
+                <TextBox  BorderThickness="3" Height="25" Name="txtUserName" Width="200"  HorizontalAlignment="Left" Margin="10,0,0,10" />
+               
+                <Label Name="lblPasswordValidation" Foreground="Red"/>
+                <PasswordBox BorderThickness="3" Height="25" Name="txtPassword" Width="200" HorizontalAlignment="Left" Margin="10,0,0,10"/>
+                <Button Name="btnLogin" Width="80" HorizontalAlignment="Right" Height="25" Content="Giriş" Margin="0,0,10,0" Click="btnLogin_Click" />
+            </StackPanel>
+
+        </DockPanel>
+    </Grid>
+</Window>
