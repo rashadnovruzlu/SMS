@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMS.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,25 +23,40 @@ namespace SMS.Windows
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void itemUser_Click(object sender, RoutedEventArgs e)
         {
-            MenuItem item = sender as MenuItem;
-            this.Title = "File: " + item.Header;
+            FillFrame(SMSPage.UserPage);
         }
 
-        private void MenuItem_Click1(object sender, RoutedEventArgs e)
+        private void itemStudent_Click(object sender, RoutedEventArgs e)
         {
-            MenuItem item = sender as MenuItem;
-            this.Title = "Edit: " + item.Header;
+            FillFrame(SMSPage.StudentPage);
         }
 
-        private void MenuItem_Click2(object sender, RoutedEventArgs e)
+        private void FillFrame(SMSPage page)
         {
-            MenuItem item = sender as MenuItem;
-            this.Title = "View: " + item.Header;
+            string path = null;
+
+            switch (page)
+            {
+                case SMSPage.StudentPage:
+                    path = "Pages/StudentPage.xaml";
+                    break;
+                case SMSPage.UserPage:
+                    path= "Pages/UserPage.xaml";
+                    break;
+                default:
+                    break;
+            }
+
+            frmMain.Navigate(new Uri(path, UriKind.RelativeOrAbsolute));
+
+
         }
+
+
     }
 }

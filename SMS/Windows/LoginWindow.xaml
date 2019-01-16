@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SMS.Windows"
         mc:Ignorable="d"
-         Height="250" Width="400"  Title="Tətbiqə giriş" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" >
+        Height="250" Width="400"  Title="Tətbiqə giriş" WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" WindowStyle="SingleBorderWindow" >
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="pack://application:,,,/Images/Login_bg.png" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <DockPanel LastChildFill="True" >
+        <DockPanel>
             <StackPanel Width="150" DockPanel.Dock="Left" VerticalAlignment="Center">
                 <Image Height="200" Width="150" Source="pack://application:,,,/Images/Login.png" />
             </StackPanel>

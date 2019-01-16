@@ -5,21 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SMS.Windows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Əsas ekran" Height="450" Width="800">
     <Grid>
         <Menu>
-            <MenuItem Header="Export" >
-
-                <MenuItem Header="New">
+            <MenuItem Header="İstifadəçilər" Name="itemUser" Click="itemUser_Click"  />
+            <MenuItem Header="İmtahan" >
+                <MenuItem Header="İmtahan nəticələri">
+                    <MenuItem.Icon>
+                        <Image Source="pack://application:,,,/Images/Login.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="İmtahanlar">
                     <MenuItem.Icon>
                         <Image Source="pack://application:,,,/Images/Login.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
+            <MenuItem Header="Tələbə" >
+                <MenuItem Header="Tələbələr" Name="itemStudent" Click="itemStudent_Click">
+                    <MenuItem.Icon>
+                        <Image Source="pack://application:,,,/Images/Login.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Tələbə məlumatları">
+                    <MenuItem.Icon>
+                        <Image Source="pack://application:,,,/Images/Login.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Digər" >
+                <MenuItem Header="Grup">
+                    <MenuItem.Icon>
+                        <Image Source="pack://application:,,,/Images/Login.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Fən">
+                    <MenuItem.Icon>
+                        <Image Source="pack://application:,,,/Images/Login.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+               
+            </MenuItem>
 
-            <MenuItem Header="Export" />
-            <MenuItem Header="New record" />
+            <MenuItem Header="Hesabat" />
+            <MenuItem Header="Sazlamalar" />
+          
         </Menu>
 
+        <Frame Name="frmMain" NavigationUIVisibility="Hidden" ></Frame>
+       
     </Grid>
 </Window>
